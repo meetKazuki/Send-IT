@@ -121,7 +121,6 @@ h2 ~ p {
 .header-logo {
   background-color: #d7eef2;
   border-radius: 50%;
-  /* box-sizing: border-box; */
   display: block;
   height: 10vh;
   left: 30px;
@@ -190,7 +189,6 @@ h2 ~ p {
   border: 10px solid;
   border-color: #f6f6e9 transparent transparent;
   bottom: 2vh;
-  /* color: #f2855e; */
   content: "";
   height: 0;
   left: 50%;
@@ -277,7 +275,7 @@ h2 ~ p {
   position: relative;
   margin: 5% auto;
   width: 600px;
-  height: 400px;
+  height: 450px;
   background: #f6f6e9;
   border-radius: 2px;
   box-shadow: 0 2px 4px #00587a;
@@ -393,4 +391,145 @@ button.social-signin.twitter {
 }
 button.social-signin.google {
   background: #dd4b39;
+}
+
+
+/* &&&& sign-in form styles &&&& */
+.signin-container {
+  width: 600px;
+  margin: 30px auto 0;
+  display: block;
+  padding: 10px 50px 50px;
+}
+.signin-container h2 {
+  margin-bottom: 50px;
+}
+.group {
+  position: relative;
+  margin-bottom: 100px;
+}
+.group input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #194769;
+}
+.group input:focus {
+  outline: none;
+}
+/* sign-in styles [label] */
+.group label {
+  color: #32508e;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.3s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  opacity: 0.5;
+}
+/* sign-in styles [label:active] */
+input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #00587a;
+}
+/* sign-in styles [bottom bars] */
+.bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+.bar:before,
+.bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #00587a;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+/* active state */
+.group input:focus ~ .bar:before,
+.group input:focus ~ .bar:after {
+  width: 50%;
+}
+/* sign-in form styles [highlight] */
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+/* active state */
+.group input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+/* active state */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #00587a;
+  }
+  to {
+    width:0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background:#00587a;
+  }
+  to {
+    width:0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #00587a;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+/* sign-in styles [button] */
+.signin-container button {
+  /* margin-top: -500px; */
+  width: 120px;
+  height: 32px;
+  color: #f6f6e9;
+  background: #00587a;
+  border: none;
+  border-radius: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+.signin-container button:hover,
+.signin-container button:focus {
+  opacity: 1;
+  box-shadow: 0 1px 2px #00587a;
+  transition: 0.1s ease-in-out;
 }
