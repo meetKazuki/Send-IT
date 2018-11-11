@@ -18,7 +18,7 @@ class User {
       name: data.name,
       email: data.email,
       gender: data.gender,
-      location: data.location,
+      address: data.address,
     };
     this.users.push(newUser);
     return newUser;
@@ -49,7 +49,7 @@ class User {
     this.users[index].name = data['name'] || user.name;
     this.users[index].email = data['email'] || user.email;
     this.users[index].gender = data['gender'] || user.gender;
-    this.users[index].location = data['location'] || user.location;
+    this.users[index].address = data['address'] || user.address;
     return this.users[index];
   }
 

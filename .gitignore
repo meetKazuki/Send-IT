@@ -1,3 +1,4 @@
 # ignore this folders (for the sake of my sanity)
 /build
 /node_modules
+/tests
