@@ -1,0 +1,12 @@
+language: node_js
+nodesjs:
+- node
+deploy:
+  provider: heroku
+  app:
+  strategy: git
+  cache: node_modules
+  api_key:
+    secure:
+  script:
+  after_success:
