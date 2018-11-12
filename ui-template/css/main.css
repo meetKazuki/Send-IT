@@ -395,32 +395,32 @@ button.social-signin.google {
 
 
 /* &&&& sign-in form styles &&&& */
-.signin-container {
+/* .signin-container {
   width: 600px;
   margin: 30px auto 0;
   display: block;
   padding: 10px 50px 50px;
-}
-.signin-container h2 {
+} */
+/* .signin-container h2 {
   margin-bottom: 50px;
-}
-.group {
+} */
+/* .group {
   position: relative;
   margin-bottom: 100px;
-}
-.group input {
+} */
+/* .group input {
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
   width: 300px;
   border: none;
   border-bottom: 1px solid #194769;
-}
-.group input:focus {
+} */
+/* .group input:focus {
   outline: none;
-}
+} */
 /* sign-in styles [label] */
-.group label {
+/* .group label {
   color: #32508e;
   font-size: 18px;
   font-weight: normal;
@@ -432,21 +432,21 @@ button.social-signin.google {
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
   opacity: 0.5;
-}
+} */
 /* sign-in styles [label:active] */
-input:focus ~ label,
+/* input:focus ~ label,
 input:valid ~ label {
   top: -20px;
   font-size: 14px;
   color: #00587a;
-}
+} */
 /* sign-in styles [bottom bars] */
-.bar {
+/* .bar {
   position: relative;
   display: block;
   width: 300px;
-}
-.bar:before,
+} */
+/* .bar:before,
 .bar:after {
   content: '';
   height: 2px;
@@ -463,14 +463,14 @@ input:valid ~ label {
 }
 .bar:after {
   right: 50%;
-}
+} */
 /* active state */
-.group input:focus ~ .bar:before,
+/* .group input:focus ~ .bar:before,
 .group input:focus ~ .bar:after {
   width: 50%;
-}
+} */
 /* sign-in form styles [highlight] */
-.highlight {
+/* .highlight {
   position: absolute;
   height: 60%;
   width: 100px;
@@ -478,7 +478,7 @@ input:valid ~ label {
   left: 0;
   pointer-events: none;
   opacity: 0.5;
-}
+} */
 /* active state */
 .group input:focus ~ .highlight {
   -webkit-animation: inputHighlighter 0.3s ease;
@@ -532,6 +532,4 @@ input:valid ~ label {
   opacity: 1;
   box-shadow: 0 1px 2px #00587a;
   transition: 0.1s ease-in-out;
-}
-
-
+} */

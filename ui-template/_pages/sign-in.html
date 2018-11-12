@@ -23,25 +23,33 @@
     </a>
   </header>
 
-  <main class="signin-container">
-    <h2>Sign In Here</h2>
-    <form>
+  <main id="signup-box">
+    <div class="left">
+      <h1>Sign In</h1>
       <div class="group">
         <input type="text" required>
         <span class="highlight"></span>
         <span class="bar"></span>
         <label>Username or email address</label>
       </div>
-  
       <div class="group">
         <input type="password" required>
         <span class="highlight"></span>
         <span class="bar"></span>
         <label>Enter password</label>
       </div>
+      <a href="dashboard.html"></a><button>Sign In</button></a>
+    </div>
+
+    <div class="right">
+      <span class="login-alt">Sign in with <br>social network</span>
   
-      <button>Sign In</button>
-    </form>
+      <button class="social-signin facebook">Log in with Facebook</button>
+      <button class="social-signin twitter">Log in with Twitter</button>
+      <button class="social-signin google">Log in with Google+</button>
+    </div>
+
+    <div class="or">OR</div>
   </main>
 
   <footer class="footer">
