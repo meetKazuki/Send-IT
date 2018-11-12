@@ -1,11 +1,6 @@
 import UserModel from '../models/User';
 
 const User = {
-  /**
-   * @param {object} req
-   * @param {object} res
-   * @returns {object} user object
-   */
   create(req, res) {
     if (!req.body.name && !req.body.email && !req.body.gender && !req.body.address) {
       return res.status(400).send({ message: 'All fields are required' });
@@ -14,21 +9,11 @@ const User = {
     return res.status(201).send(user);
   },
 
-  /**
-   * @param {object} req
-   * @param {object} res
-   * @returns {object} user array
-   */
   getAll(req, res) {
     const users = UserModel.findAll();
     return res.status(200).send(users);
   },
 
-  /**
-   * @param {object} req
-   * @param {object} res
-   * @returns {object} user object
-   */
   getOne(req, res) {
     const user = UserModel.findOne(req.params.id);
     if (!user) {
@@ -37,11 +22,6 @@ const User = {
     return res.status(200).send(user);
   },
 
-  /**
-   * @param {object} req
-   * @param {object} res
-   * @returns {object} updated user
-   */
   update(req, res) {
     const user = UserModel.findOne(req.params.id);
     if (!user) {
@@ -51,11 +31,6 @@ const User = {
     return res.status(200).send(updateUser);
   },
 
-  /**
-   * @param {object} req
-   * @param {object} res
-   * @returns {void} status code 204
-   */
   delete(req, res) {
     const user = UserModel.findOne(req.params.id);
     if (!user) {

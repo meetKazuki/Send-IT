@@ -1,17 +1,10 @@
 import uuid from 'uuid';
 
 class User {
-  /**
-   * class ctor
-   * @param {object} data
-   */
   constructor() {
     this.users = [];
   }
 
-  /**
-   * @returns {object} user object
-   */
   create(data) {
     const newUser = {
       id: uuid.v4(),
@@ -24,25 +17,14 @@ class User {
     return newUser;
   }
 
-  /**
-   * @params {uuid} id
-   * @returns {object} user object
-   */
   findOne(id) {
     return this.users.find(user => user.id === id);
   }
 
-  /**
-   * @returns {object} return all users
-   */
   findAll() {
     return this.users;
   }
 
-  /**
-   * @param {uuid} id
-   * @param {object} data
-   */
   update(id, data) {
     const user = this.findOne(id);
     const index = this.users.indexOf(user);
@@ -53,9 +35,6 @@ class User {
     return this.users[index];
   }
 
-  /**
-   * @param {uuid} id
-   */
   delete(id) {
     const user = this.findOne(id);
     const index = this.users.indexOf(user);
