@@ -13,16 +13,16 @@
   <aside id="side-menu">
     <nav>
       <a href="#" class="active"><i class="fa fa-home"></i> Home</a>
-      <a href="#"><i class="fa fa-truck"></i> Your Delivery</a>
-      <a href="#"><i class="fa fa-user"></i> Profile</a>
-      <a href="#"><i class="fa fa-cog"></i> Settings</a>
+      <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+      <a href="delivery.html"><i class="fa fa-truck"></i> Your Delivery</a>
+      <a href="settings.html"><i class="fa fa-cog"></i> Settings</a>
     </nav>
   </aside>
 
   <header>
     <div class="user-area">
       <a href="index.html">Home</a>
-      <a href="#" class="create-button"><i class="fa fa-plus"></i></a>
+      <!-- <a href="#" class="create-button"><i class="fa fa-plus"></i></a> -->
     </div>
   </header>
 
@@ -41,10 +41,16 @@
 
       <div class="card col-md-8">
         <h4>Delivery Stats</h4>
-         <h6 class="delivered">3</h6>
-         <span>Delivered Packages</span>
-         <h6 class="pending">2</h6>
-         <span>Pending Delivery</span>
+        <div class="stat-container">
+          <div class="float-left">
+            <h6 class="delivered">3</h6>
+            <span>Delivered Packages</span>
+          </div>
+          <div class="float-right">
+            <h6 class="pending">2</h6>
+            <span>Pending Delivery</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -60,13 +66,6 @@
       </thead>
 
       <tbody>
-        <tr>
-          <td>87789</td>
-          <td>5kg</td>
-          <td>8 Inyang Ekeng Street, Calabar</td>
-          <td>Lagos</td>
-          <td>Pending</td>
-        </tr>
         <tr>
           <td>87789</td>
           <td>5kg</td>
