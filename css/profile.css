@@ -52,11 +52,11 @@ a img {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   min-height: 100vh;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Raleway', Helvetica, sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 
@@ -75,6 +75,7 @@ nav a {
   display: block;
   color: #f6f6f9;
   text-decoration: none;
+  text-transform: uppercase;
   padding: 15px 30px;
   transition: all 0.3s ease-in-out;
 }
@@ -136,48 +137,14 @@ header {
   color: #f2855e;
 }
 
-
-#main-content {
-  margin: 100px 0 0 300px;
-  display: flex;
-}
-.profile-info-container {
-  display: block;
-  padding: 10px;
-}
-.contact-info-container {
-  display: block;
-  padding: 10px 15px 25px 10px;
-}
-.contact-info-container h2 {
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-.contact-info-container ul {
-  display: inline-block;
-  list-style: none;
-  margin: 1px 2px 1px 2px;
-}
-.contact-info-container li {
-  float: left;
-  width: 85%;
-  margin-top: 20px;
-  text-align: left;
-}
-.info {
-  margin-left: 30%;
-  text-align: left;
-}
-.profile-container {
-  display: block;
-  float: right;
-  top: 0;
-  width: 50%;
-}
-
-.avatar-container {
+.avatar-card {
+  margin-left: 330px;
+  margin-top: 10px;
+  width: 23vw;
+  height: 50vh;
+  padding: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 .avatar {
   border-radius: 50%;
@@ -186,17 +153,13 @@ header {
   width: 150px;
   position: relative;
   margin: 0 auto;
-  top: -60px;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -webkit-box-shadow: 0 0 0 13px #f0f0f0;
-  -moz-box-shadow: 0 0 0 13px #f0f0f0;
 }
 .avatar img {
   position: absolute;
+  background-size: contain;
   left: 0;
   top: 0;
+  margin-bottom: 5px;
   width: 100%;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -205,9 +168,46 @@ header {
 h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 15px;
   color: #333;
   width: 85%;
-  margin: 0 auto;
+  margin: 15px auto;
   text-transform: uppercase
+}
+h4 {
+  text-align: center;
+}
+
+
+/* &&&& main content styles &&&& */
+main {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+/* &&&& contact info style &&&& */
+.content-info-container {
+  flex: 2;
+  margin-top: 10px;
+}
+.contact {
+  padding: 5px;
+  display: block;
+  line-height: 1.6;
+}
+.contact h6 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.contact p {
+  font-size: .95rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.details {
+  text-transform: none;
+  font-weight: normal;
+  float: right;
+  padding-left: 8px;
 }

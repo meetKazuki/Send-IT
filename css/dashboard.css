@@ -52,11 +52,11 @@ a img {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   min-height: 100vh;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Raleway', Helvetica, sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 
@@ -75,6 +75,7 @@ nav a {
   display: block;
   color: #f6f6f9;
   text-decoration: none;
+  text-transform: uppercase;
   padding: 15px 30px;
   transition: all 0.3s ease-in-out;
 }
@@ -140,13 +141,13 @@ header {
 /* &&&& dashboard pane &&&& */
 #content-container {
   margin-left: 280px;
-  margin-top: 20px;
+  margin-top: 30px;
   padding-left: 15px;
 }
 .content-heading h1 {
   color: #364f6b;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: bolder;
   margin-bottom: 10px;
 }
 .content-heading p {
@@ -168,7 +169,7 @@ header {
   font-size: 1.5rem;
 }
 .user-avatar {
-  background: url(../images/display-pix-1.jpg) no-repeat center center;
+  background: url(../images/faces.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -180,7 +181,7 @@ header {
 }
 .user-name {
   font-size: 1rem;
-  color: #194769;
+  /* color: #194769; */
   display: block;
   text-align: center;
   margin: 10px 0;
@@ -197,41 +198,32 @@ header {
   display: inline-block;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-.col-md-8 {
-  width: 66.6%;
-  padding: 0 15px;
+.summary {
   display: flex;
   flex-direction: column;
-}
-.col-md-8 > h4 {
-  color: blue;
-  margin: 0 auto;
-  width: 50%;
-  text-transform: uppercase;
-}
-.stat-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 80%;
+  margin-left: 15px;
+  padding: 10px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-.delivered {
-  display: block;
-  color: green;
-  font-weight: bolder;
-  font-size: 2rem;
-  height: 100%;
-  width: 100%;
+.summary-welcome {
+  margin: 0 auto;
+  width: 50%;
 }
-.pending {
-  display: block;
-  color: red;
-  font-size: 2rem;
-  font-weight: bolder;
-  height: 100%;
-  width: 100%;
+.summary-welcome h6 {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 30vw;
 }
+.summary-figures {
+  display: flex;
+  justify-content: space-around;
+}
+.summary-figures p {
+  text-transform: uppercase;
+}
+
 
 table {
   width: 100%;
@@ -244,8 +236,8 @@ th {
   padding: 20px 10px;
   text-align: left;
   text-transform: uppercase;
-  font-weight: 500;
-  color: grey;
+  font-weight: bold;
+  color:#373331;
   -webkit-border-top-left-radius: 5px;
   -webkit-border-top-right-radius: 5px;
   -moz-border-radius-top-left-radius: 5px;

@@ -119,24 +119,23 @@ h2 ~ p {
 }
 /* header logo styles */
 .header-logo {
-  background-color: #d7eef2;
-  border-radius: 50%;
+  background-color: transparent;
   display: block;
-  height: 10vh;
+  height: 11vh;
   left: 30px;
   padding-top: 10px;
   position: relative;
   text-align: center;
-  width: 10vh;
+  width: 12.5vh;
 }
-.header-logo:hover,
-.header-logo:active {
-  background-color: #f2855e;
+.logo-cover {
+  padding: 2px;
+  background-size: contain;
+  color: #f2855e;
 }
-.header-logo img {
-  border-radius: 50%;
-  height: 80%;
-  width: auto;
+.logo-cover:hover {
+  color: #d7eef2;
+  transition: 0.4s ease-in-out;
 }
 
 
@@ -289,6 +288,9 @@ h2 ~ p {
   width: 300px;
   height: 400px;
 }
+.left a {
+  text-decoration: none;
+}
 .left h1 {
   margin: 0 0 20px 0;
   font-weight: 300;
@@ -354,7 +356,6 @@ h2 ~ p {
   padding: 40px;
   width: 300px;
   height: 400px;
-  background: url("https://goo.gl/YbktSj");
   background-size: cover;
   background-position: center;
   border-radius: 0 2px 2px 0;
@@ -394,55 +395,61 @@ button.social-signin.google {
 }
 
 
-/* &&&& sign-in form styles &&&& */
-.signin-container {
-  width: 600px;
-  margin: 30px auto 0;
-  display: block;
-  padding: 10px 50px 50px;
+/* &&&& sign-in modal styles &&&& */
+#signin-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
-.signin-container h2 {
-  margin-bottom: 50px;
-  font-weight: 300;
-  font-size: 28px;
+.signin-form-content {
+  position: relative;
+  background: #ffffff;
+  right: -470px;
+  margin-top: 11.5vh;
+  margin-left: 34vw;
+  margin-bottom: 0;
+  width: 400px;
+  padding: 10px 50px 50px;
 }
 .group {
   position: relative;
-  margin-bottom: 100px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
-.group input {
-  font-size: 18px;
+input {
+  font-size: 14px;
   padding: 10px 10px 10px 5px;
   display: block;
   width: 300px;
   border: none;
-  border-bottom: 1px solid #194769;
+  border-bottom: 1px solid #32508e;
 }
-.group input:focus {
+input:focus {
   outline: none;
 }
-/* sign-in styles [label] */
-.group label {
-  color: #32508e;
-  font-size: 18px;
-  font-weight: normal;
+label {
+  color: #194769;
+  font-size: 14px;
   position: absolute;
   pointer-events: none;
   left: 5px;
   top: 10px;
-  transition: 0.3s ease all;
+  transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
-  opacity: 0.5;
 }
-/* sign-in styles [label:active] */
 input:focus ~ label,
 input:valid ~ label {
-  top: -20px;
-  font-size: 14px;
-  color: #00587a;
+  top: -17px;
+  font-size: 13px;
+  color: #194769;
 }
-/* sign-in styles [bottom bars] */
 .bar {
   position: relative;
   display: block;
@@ -455,7 +462,7 @@ input:valid ~ label {
   width: 0;
   bottom: 1px;
   position: absolute;
-  background: #00587a;
+  background: #32508e;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
@@ -466,12 +473,10 @@ input:valid ~ label {
 .bar:after {
   right: 50%;
 }
-/* active state */
-.group input:focus ~ .bar:before,
-.group input:focus ~ .bar:after {
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
   width: 50%;
 }
-/* sign-in form styles [highlight] */
 .highlight {
   position: absolute;
   height: 60%;
@@ -481,57 +486,56 @@ input:valid ~ label {
   pointer-events: none;
   opacity: 0.5;
 }
-/* active state */
-.group input:focus ~ .highlight {
+input:focus ~ .highlight {
   -webkit-animation: inputHighlighter 0.3s ease;
   -moz-animation: inputHighlighter 0.3s ease;
   animation: inputHighlighter 0.3s ease;
 }
-/* active state */
 @-webkit-keyframes inputHighlighter {
   from {
-    background: #00587a;
+    background:#5264AE;
   }
   to {
     width:0;
-    background: transparent;
+    background:transparent;
   }
 }
 @-moz-keyframes inputHighlighter {
   from {
-    background:#00587a;
+    background:#5264AE;
   }
   to {
     width:0;
-    background: transparent;
+    background:transparent;
   }
 }
 @keyframes inputHighlighter {
   from {
-    background: #00587a;
+    background:#5264AE;
   }
   to {
-    width: 0;
-    background: transparent;
+    width:0;
+    background:transparent;
   }
 }
-/* sign-in styles [button] */
-.signin-container button {
-  /* margin-top: -500px; */
-  width: 120px;
-  height: 32px;
-  color: #f6f6e9;
-  background: #00587a;
+button {
+  /* color: #194769; */
+  height: 30px;
+  background: #d7eef2;
   border: none;
   border-radius: 2px;
-  font-weight: 500;
+  font-family: 'Rubik Light';
   text-transform: uppercase;
-  transition: 0.1s ease;
+  transition: 0.2s ease;
   cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 2px;
 }
-.signin-container button:hover,
-.signin-container button:focus {
-  opacity: 1;
-  box-shadow: 0 1px 2px #00587a;
-  transition: 0.1s ease-in-out;
+button:hover,
+button:focus {
+  color: #dd4b39;
+}
+button a {
+  text-decoration: none;
 }
