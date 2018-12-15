@@ -43,4 +43,3 @@ The codes are written in accordance with `Airbnb` JavaScript style guide.
 To contribute to this project, you can track its progress on [Github](https://github.com/meetKazuki/SendIT). 
 
 ### About Me
-You can follow me on [Twitter](https://twitter.com/meetKazuki), and I also do [Facebook](https://facebook.com/meetdesmondedem).
