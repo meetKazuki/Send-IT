@@ -1,0 +1,6 @@
+# ignore this folders (for the sake of my sanity)
+/build
+/node_modules
+/tests
+/.nyc_output
+/coverage

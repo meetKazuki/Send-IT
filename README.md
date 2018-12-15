@@ -1,5 +1,7 @@
 # SendIT
 
+[![Build Status](https://travis-ci.org/meetKazuki/Send-IT.svg?branch=api-endpoints)](https://travis-ci.org/meetKazuki/Send-IT)
+
 ## Project Description
 SendIT is a courier service that helps users deliver parcels to different destinations. SendIT provides courier quotes based on weight categories.
 
@@ -17,8 +19,27 @@ SendIT is a courier service that helps users deliver parcels to different destin
 3. The user gets real-time email notification when Admin changes the status of their parcel.
 4. The user gets real-time email notification when Admin changes the present location of their parcel.
 
+### How to Use
+1. Clone this repository using into your local machine
+>  `git clone https://github.com/meetKazuki/Send-IT`.
+2. Install dependencies
+> `npm install`
+3. Run `npm run dev-start` to start the development application.
+4. Install postman to test all the endpoints.
 
-## Contributing
+#### Test
+Run `npm test` for the server side test.
+
+### Technologies Used
+Modern JavaScript technologies were adopted for this project.
+
+* ES2015:Also known as ES6 or ES2015 or ECMASCRIPT 6.
+* NodeJS
+* Express
+
+The codes are written in accordance with `Airbnb` JavaScript style guide.
+
+### Contributing
 To contribute to this project, you can track its progress on [Github](https://github.com/meetKazuki/SendIT). 
 
 ### About Me
