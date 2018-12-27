@@ -1,8 +1,8 @@
-import ParcelModel from '../models/Parcel';
+import ParcelModel from '../models/ParcelModel';
 
 const Parcel = {
   create(req, res) {
-    if (!req.body.weight && !req.body.pickupLocation && !req.body.destination) {
+    if (!req.body.weight || !req.body.pickupLocation || !req.body.destination) {
       return res.status(400).send({ message: 'All fields are required' });
     }
     const parcel = ParcelModel.create(req.body);

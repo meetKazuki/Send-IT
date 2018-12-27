@@ -1,8 +1,8 @@
-import UserModel from '../models/User';
+import UserModel from '../models/UserModel';
 
 const User = {
   create(req, res) {
-    if (!req.body.name && !req.body.email && !req.body.gender && !req.body.address) {
+    if (!req.body.name || !req.body.email || !req.body.gender || !req.body.address) {
       return res.status(400).send({ message: 'All fields are required' });
     }
     const user = UserModel.create(req.body);
@@ -36,7 +36,7 @@ const User = {
     if (!user) {
       return res.status(404).send({ message: 'user not found' });
     }
-    const userRef = userModel.delete(req.params.id);
+    const userRef = UserModel.delete(req.params.id);
     return res.status(204).send(userRef);
   },
 };

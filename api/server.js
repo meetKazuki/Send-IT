@@ -1,10 +1,11 @@
-import app from './src/app';
+import express from 'express';
+import router from './routes/routes';
+
+const app = express();
+
+app.use(router);
 
 const port = process.env.PORT || 3000;
-
-// launch app and listen to specified port
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+app.listen(port, () => console.log(`Server running on port ${port}`));
 
 export default app;
