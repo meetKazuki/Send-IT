@@ -1,7 +1,7 @@
 # SendIT
 
-[![Build Status](https://travis-ci.org/meetKazuki/Send-IT.svg?branch=api-endpoints)](https://travis-ci.org/meetKazuki/Send-IT)
-[![Coverage Status](https://coveralls.io/repos/github/meetKazuki/Send-IT/badge.svg?branch=master)](https://coveralls.io/github/meetKazuki/Send-IT?branch=master)
+[![Build Status](https://travis-ci.org/meetKazuki/Send-IT.svg?branch=develop)](https://travis-ci.org/meetKazuki/Send-IT)
+[![Coverage Status](https://coveralls.io/repos/github/meetKazuki/Send-IT/badge.svg)](https://coveralls.io/github/meetKazuki/Send-IT)
 
 ## Project Description
 SendIT is a courier service that helps users deliver parcels to different destinations. SendIT provides courier quotes based on weight categories.

@@ -21,4 +21,19 @@ describe('', () => {
         done(err);
       });
   });
+
+  it('should return a 404 for all invalid routes', (done) => {
+    chai
+      .request(app)
+      .post('/api/v1')
+      .end((err, res) => {
+        expect(res).to.have.status(404);
+        expect(res.body).to.be.an('object');
+        expect(res.body).to.have.property('status');
+        expect(res.body.status).to.equal(404);
+        expect(res.body).to.have.property('error');
+        expect(res.body.error).to.equal('Endpoint does not exist');
+        done(err);
+      });
+  });
 });
