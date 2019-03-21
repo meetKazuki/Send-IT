@@ -1,5 +1,5 @@
 import express from 'express';
-import ValidateParcel from '../middleware/ValidationHelper';
+import ValidateParcel from '../middleware/validateParcel';
 import ParcelController from '../controllers/ParcelController';
 
 const router = express.Router();
@@ -28,9 +28,11 @@ router.get(
 /**
  * POST endpoints
  */
-router.post('/parcels', (req, res) => {
-  console.log('...');
-});
+router.post(
+  '/parcels',
+  ValidateParcel.validatePostRequest,
+  ParcelController.createParcel,
+);
 
 /**
  * API v2 endpoints

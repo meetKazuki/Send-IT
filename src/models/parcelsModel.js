@@ -4,7 +4,7 @@ const parcelDB = [
     createdOn: new Date(),
     createdBy: 3,
     weight: '2kg',
-    pickupLocation: 'Sabo-Yaba, Lagos',
+    pickupLocation: '',
     destination: 'Iyana-Ipaja, Lagos',
     status: 'pending',
   },
