@@ -4,6 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/meetKazuki/Send-IT/badge.svg)](https://coveralls.io/github/meetKazuki/Send-IT)
 
 ## Project Description
+---
 SendIT is a courier service that helps users deliver parcels to different destinations. SendIT provides courier quotes based on weight categories.
 
 ### Features
@@ -20,27 +21,45 @@ SendIT is a courier service that helps users deliver parcels to different destin
 3. The user gets real-time email notification when Admin changes the status of their parcel.
 4. The user gets real-time email notification when Admin changes the present location of their parcel.
 
-### How to Use
-1. Clone this repository using into your local machine
->  `git clone https://github.com/meetKazuki/Send-IT`.
-2. Install dependencies
-> `npm install`
-3. Run `npm run dev-start` to start the development application.
-4. Install postman to test all the endpoints.
-
-#### Test
-Run `npm test` for the server side test.
-
 ### Technologies Used
+---
 Modern JavaScript technologies were adopted for this project.
 
 * ES2015:Also known as ES6 or ES2015 or ECMASCRIPT 6.
 * NodeJS
 * Express
+* PostgreSQL
+* The codes were written following `Airbnb` JavaScript style guide.
 
-The codes are written in accordance with `Airbnb` JavaScript style guide.
+### Getting Started
+---
+
+#### Prerequisites
+Ensure that you have the following installed on your local machine:
+- [NodeJS](https://nodejs.org/en/download/)
+- [PostgreSQL](https://www.postgresql.org/download/)
+
+#### Run locally
+- To run app locally, make sure you have `NodeJS`, `PostgreSQL` installed.
+- Clone this repository
+
+  ```bash
+    - git clone https://github.com/meetKazuki/Send-IT.git
+    - cd Send-IT
+    - npm install
+  ```
+- `npm run dev-start` to start the server and watch for file changes
+
+#### Testing
+- You can test the api locally using [*Postman*](https://www.getpostman.com)
+- Run `npm test` for automated testing
+
+#### HTTP Response Codes
+- `200` `OK` The request was successful
+- `400` `Bad Request` There was a problem with the request (security, malformed request)
+- `404` `Not found` An attempt was made to access a resource that does not exist in the API
+- `500` `Server Error` An error on the server occured
 
 ### Contributing
-To contribute to this project, you can track its progress on [Github](https://github.com/meetKazuki/SendIT). 
-
-### About Me
+---
+TBA
