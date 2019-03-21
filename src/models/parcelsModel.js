@@ -1,0 +1,58 @@
+const parcelDB = [
+  {
+    id: 1,
+    createdOn: new Date(),
+    createdBy: 3,
+    weight: '2kg',
+    pickupLocation: 'Sabo-Yaba, Lagos',
+    destination: 'Iyana-Ipaja, Lagos',
+    status: 'pending',
+  },
+  {
+    id: 2,
+    createdOn: new Date(),
+    createdBy: 1,
+    weight: '23kg',
+    pickupLocation: 'Ikpa Road, Uyo',
+    destination: 'Nwaniba, Uyo',
+    status: 'pending',
+  },
+  {
+    id: 3,
+    createdOn: new Date(),
+    createdBy: 5,
+    weight: '5kg',
+    pickupLocation: 'Marian Road, Calabar',
+    destination: 'Akai-Effa, Calabar',
+    status: 'pending',
+  },
+  {
+    id: 4,
+    createdOn: new Date(),
+    createdBy: 8,
+    weight: '2.3kg',
+    pickupLocation: 'Sabo-Yaba, Lagos',
+    destination: 'Watt Market, Calabar',
+    status: 'pending',
+  },
+  {
+    id: 5,
+    createdOn: new Date(),
+    createdBy: 6,
+    weight: '12kg',
+    pickupLocation: 'Oshodi, Lagos',
+    destination: 'Berger, Lagos',
+    status: 'pending',
+  },
+  {
+    id: 6,
+    createdOn: new Date(),
+    createdBy: 3,
+    weight: '21kg',
+    pickupLocation: 'Apapa, Lagos',
+    destination: 'Gbagada, Lagos',
+    status: 'pending',
+  },
+];
+
+export default parcelDB;
