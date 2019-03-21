@@ -1,48 +1,48 @@
 {
-  "name": "send-it",
+  "name": "Send-IT",
   "version": "1.0.0",
-  "description": "SendIT is a courier service that helps users deliver parcels to different destinations. SendIT provides courier quotes based on weight categories.",
-  "main": "server.js",
-  "scripts": {
-    "build": "babel api/server.js --out-dir build",
-    "dev-start": "babel-watch api/server.js",
-    "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha api/test/test.js"
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
   },
-  "nyc": {
-    "require": [
-      "babel-register"
-    ],
-    "sourceMap": false,
-    "instrument": false
+  "scripts": {
+    "build": "npm run clean && npm run build-babel",
+    "build-babel": "babel src -d build",
+    "clean": "rm -rf build .nyc_output coverage && mkdir build",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "dev-start": "babel-watch ./src/server.js",
+    "start": "npm run build && node ./build/server.js",
+    "test": "nyc mocha --require @babel/register --require @babel/polyfill --timeout 1000 --exit"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/meetKazuki/Send-IT.git"
   },
-  "author": "Desmond Edem <kukiito219@gmail.com> (https://meetkazuki.github.io)",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/meetKazuki/Send-IT/issues"
   },
   "homepage": "https://github.com/meetKazuki/Send-IT#readme",
-  "dependencies": {
-    "express": "^4.16.4",
-    "uuid": "^3.3.2"
-  },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-istanbul": "^5.1.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
-    "babel-watch": "^2.0.7",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.1",
+    "@babel/register": "^7.4.0",
+    "babel-watch": "^7.0.0",
     "chai": "^4.2.0",
-    "chai-http": "^4.2.0",
-    "cross-env": "^5.2.0",
-    "eslint": "^5.9.0",
+    "chai-http": "^4.2.1",
+    "coveralls": "^3.0.3",
+    "eslint": "^5.15.3",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "mocha": "^5.2.0",
-    "nyc": "^13.1.0",
-    "supertest": "^3.3.0"
+    "eslint-plugin-import": "^2.16.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.0",
+    "express": "^4.16.4"
   }
 }
