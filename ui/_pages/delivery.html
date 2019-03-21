@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="images/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Your Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/delivery.css">
+</head>
+<body>
+  <aside id="side-menu">
+    <nav>
+      <a href="dashboard.html"><i class="fa fa-home"></i> Home</a>
+      <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+      <a href="delivery.html" class="active"><i class="fa fa-truck"></i> Your Delivery</a>
+      <a href="settings.html"><i class="fa fa-cog"></i> Settings</a>
+    </nav>
+  </aside>
+
+  <header>
+    <div class="user-area">
+      <a href="index.html">Home</a>
+      <a id="modal-button" class="create-button"><i class="fa fa-plus"></i></a>
+    </div>
+  </header>
+
+  <div id="parcel-modal" class="parcel-form">
+    <div class="modal-form-content">
+      <span class="close-button">&times;</span>
+      <input type="text" placeholder="Enter parcel name">
+      <input type="text" placeholder="Enter pickup location">
+      <input type="text" placeholder="Enter destination">
+
+      <button class="confirm">Create Delivery</button>
+    </div>
+  </div>
+
+  <main>
+
+    <div class="wrapper">
+      <h1>All Deliveries</h1>
+
+      <div class="parcel-wrapper">
+        <div class="parcel-box">
+          <div class="parcel">
+            <div class="parcel-title">
+              <h4>Parcel Title</h4>
+            </div>
+            <hr>
+            <p>Destination <span class="normal">Sabo Yaba, Lagos</span></p>
+            <p>Status <span class="normal">pending</span></p>
+            <p>Current location <span class="normal">Iyanu Ipaja</span></p>
+          </div>
+        </div>
+
+        <div class="parcel-box">
+          <div class="parcel">
+            <div class="parcel-title">
+              <h4>Parcel Title</h4>
+            </div>
+            <hr>
+            <p>Destination <span class="normal">Sabo Yaba, Lagos</span></p>
+            <p>Status <span class="normal">pending</span></p>
+            <p>Current location <span class="normal">Iyanu Ipaja</span></p>
+          </div>
+        </div>
+
+        <div class="parcel-box">
+          <div class="parcel">
+            <div class="parcel-title">
+              <h4>Parcel Title</h4>
+            </div>
+            <hr>
+            <p>Destination <span class="normal">Sabo Yaba, Lagos</span></p>
+            <p>Status <span class="normal">pending</span></p>
+            <p>Current location <span class="normal">Iyanu Ipaja</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="js/delivery-modal.js"></script>
+</body>
