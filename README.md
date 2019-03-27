@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/meetKazuki/Send-IT.svg?branch=develop)](https://travis-ci.org/meetKazuki/Send-IT)
 [![Coverage Status](https://coveralls.io/repos/github/meetKazuki/Send-IT/badge.svg)](https://coveralls.io/github/meetKazuki/Send-IT)
 [![Maintainability](https://api.codeclimate.com/v1/badges/10d1502b46ac87ac2a06/maintainability)](https://codeclimate.com/github/meetKazuki/Send-IT/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/10d1502b46ac87ac2a06/test_coverage)](https://codeclimate.com/github/meetKazuki/Send-IT/test_coverage)
 
 ## Project Description
 ---

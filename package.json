@@ -10,7 +10,7 @@
     "build": "npm run clean && npm run build-babel",
     "build-babel": "babel src -d build",
     "clean": "rm -rf build .nyc_output coverage && mkdir build",
-    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "coverage": "nyc report --reporter=text-lcov | coveralls && nyc report --reporter=lcov",
     "dev-start": "babel-watch ./src/server.js",
     "start": "npm run build && node ./build/server.js",
     "test": "nyc mocha --require @babel/register --require @babel/polyfill --timeout 1000 --exit"
