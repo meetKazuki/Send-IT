@@ -221,5 +221,3 @@ describe('GET /parcels requests', () => {
       });
   });
 });
-
-

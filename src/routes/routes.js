@@ -15,6 +15,7 @@ router.get('/', (req, res) => res.status(200).json({
   status: 200,
   message: 'Welcome to SendIt API v1',
 }));
+
 router.get(
   '/parcels',
   ParcelController.getAllParcels,
@@ -23,6 +24,10 @@ router.get(
   '/parcels/:id',
   ValidateParcel.validateGetRequest,
   ParcelController.getAParcel,
+);
+router.get(
+  '/users/:id/parcels',
+  ParcelController.getParcelByUser,
 );
 
 /**

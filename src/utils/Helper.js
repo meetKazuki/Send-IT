@@ -6,4 +6,9 @@ const validate = {
   location: /^([0-9]+)[.]([0-9]+)$/,
 };
 
-export default validate;
+const parcelByUser = (db, id) => db.filter((parcel) => {
+  const { createdBy } = parcel;
+  return createdBy === id;
+});
+
+export { validate, parcelByUser };

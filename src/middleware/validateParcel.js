@@ -1,4 +1,4 @@
-import parcelDB from '../models/parcelsModel';
+import parcelDB from '../database/parcels';
 
 class ValidateParcel {
   static validatePostRequest(req, res, next) {

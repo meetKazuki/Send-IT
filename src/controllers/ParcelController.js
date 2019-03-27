@@ -1,4 +1,5 @@
-import parcelDB from '../models/parcelsModel';
+import parcelDB from '../database/parcels';
+import { parcelByUser } from '../utils/Helper';
 
 class ParcelController {
   static createParcel(req, res) {
@@ -38,25 +39,22 @@ class ParcelController {
       status: 200,
       data,
     });
+  }
 
-    /* const id = parseInt(req.params.id, 10);
+  static getParcelByUser(req, res) {
+    const { id } = req.params;
+    const findParcels = parcelByUser(parcelDB, id);
 
-    let parcelFromDB;
-
-    parcelDB.map((parcel) => {
-      if (parcel.id === id) parcelFromDB = parcel;
-    });
-
-    if (parcelFromDB) {
-      return res.status(200).json({
-        status: 200,
-        data: parcelFromDB,
+    if (findParcels.length === 0) {
+      res.status(404).json({
+        status: 404,
+        error: 'cannot find parcel',
       });
     }
-    return res.status(404).json({
-      status: 404,
-      error: 'parcel does not exist',
-    }); */
+    res.status(200).json({
+      status: 200,
+      data: findParcels,
+    });
   }
 }
 
